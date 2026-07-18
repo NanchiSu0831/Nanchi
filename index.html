@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="模块化智能机器人分阶段产品构想与交互可视化" />
+  <meta name="theme-color" content="#08111f" />
+  <title>Modular Intelligence Robot · 交互可视化</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回顶部">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span><strong>MODULAR INTELLIGENCE</strong><small>跨载体机器人智能部件平台</small></span>
+    </a>
+    <nav class="top-nav" aria-label="主要导航">
+      <a href="#visualizer">动态演示</a><a href="#architecture">系统架构</a><a href="#roadmap">开发路线</a>
+    </nav>
+    <button id="themeToggle" class="icon-button" type="button" aria-label="切换明暗主题">◐</button>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">PRODUCT CONCEPT / V0.1</p>
+        <h1>让头、手、手臂与工具<br><span>成为可迁移的智能体</span></h1>
+        <p class="hero-lead">同一个机器人部件，可以在桌面工作站、移动机器人、人形身体与无人机之间迁移。磁力负责捕获与找正，机械锁负责承载，统一接口负责供电、数据、身份与安全。</p>
+        <div class="hero-actions"><a class="button primary" href="#visualizer">进入动态演示</a><a class="button secondary" href="#roadmap">查看阶段路线</a></div>
+      </div>
+      <div class="hero-orbit" aria-label="模块化机器人概念图">
+        <svg viewBox="0 0 560 520" role="img" aria-labelledby="heroSvgTitle">
+          <title id="heroSvgTitle">机器人身体与头部、双臂、手和无人机模块围绕连接</title>
+          <defs><radialGradient id="heroCore" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="var(--accent-soft)"/><stop offset="1" stop-color="var(--panel)"/></radialGradient><filter id="heroGlow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+          <circle cx="280" cy="265" r="184" class="orbit-line"/><circle cx="280" cy="265" r="126" class="orbit-line dashed"/>
+          <g class="hero-bot"><rect x="220" y="168" width="120" height="148" rx="42" fill="url(#heroCore)" class="metal-stroke"/><rect x="243" y="108" width="74" height="58" rx="22" class="metal-fill metal-stroke"/><path d="M258 138h44" class="sensor-line"/><circle cx="260" cy="135" r="5" class="accent-fill"/><circle cx="300" cy="135" r="5" class="accent-fill"/><circle cx="220" cy="206" r="25" class="joint-shell"/><circle cx="340" cy="206" r="25" class="joint-shell"/><circle cx="250" cy="316" r="22" class="joint-shell"/><circle cx="310" cy="316" r="22" class="joint-shell"/><path d="M245 206h70M280 174v128" class="body-detail"/><circle cx="280" cy="242" r="28" class="connector-ring"/><circle cx="280" cy="242" r="9" class="accent-fill" filter="url(#heroGlow)"/></g>
+          <g class="orbit-module module-head" transform="translate(65 95)"><rect width="84" height="62" rx="22" class="metal-fill metal-stroke"/><circle cx="24" cy="30" r="6" class="accent-fill"/><circle cx="59" cy="30" r="6" class="accent-fill"/><path d="M27 47h29" class="body-detail"/><circle cx="42" cy="65" r="13" class="connector-ring"/></g>
+          <g class="orbit-module module-arm" transform="translate(386 88) rotate(13)"><circle cx="16" cy="22" r="20" class="joint-shell"/><rect x="28" y="10" width="84" height="25" rx="12" class="metal-fill metal-stroke"/><circle cx="117" cy="22" r="17" class="joint-shell"/><rect x="130" y="11" width="72" height="23" rx="11" class="metal-fill metal-stroke"/><circle cx="207" cy="22" r="14" class="connector-ring"/></g>
+          <g class="orbit-module module-hand" transform="translate(414 342) rotate(-10)"><circle cx="14" cy="36" r="16" class="connector-ring"/><rect x="28" y="13" width="54" height="48" rx="17" class="metal-fill metal-stroke"/><path d="M73 20l38-12M77 30l42-3M77 40l41 7M72 49l35 18" class="finger-line"/><circle cx="82" cy="27" r="5" class="joint-dot"/><circle cx="85" cy="43" r="5" class="joint-dot"/></g>
+          <g class="orbit-module module-drone" transform="translate(60 354)"><rect x="64" y="28" width="98" height="40" rx="18" class="metal-fill metal-stroke"/><path d="M75 30L38 8M151 30l38-22M75 66L39 89m111-23 39 23" class="drone-arm"/><ellipse cx="28" cy="6" rx="31" ry="7" class="rotor"/><ellipse cx="198" cy="6" rx="31" ry="7" class="rotor"/><ellipse cx="28" cy="94" rx="31" ry="7" class="rotor"/><ellipse cx="198" cy="94" rx="31" ry="7" class="rotor"/><circle cx="113" cy="70" r="16" class="connector-ring"/></g>
+          <path d="M160 139C205 171 216 185 225 198M391 144C357 169 348 183 340 200M418 371C374 340 350 323 330 307M167 388C208 356 227 333 245 312" class="data-link"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="metrics section-shell" aria-label="产品概览"><article><span>4</span><p>阶段产品路线</p></article><article><span>1</span><p>统一机电接口</p></article><article><span>3</span><p>分层智能架构</p></article><article><span>∞</span><p>部件与载体组合</p></article></section>
+
+    <section id="visualizer" class="section-shell visualizer-section">
+      <div class="section-heading"><div><p class="eyebrow">INTERACTIVE STORYBOARD</p><h2>分阶段动态演示</h2></div><p>播放理想体验，再点击难点图标。系统会跳到对应时间点，并圈出接口、关节、飞控或安全问题。</p></div>
+      <div class="stage-tabs" role="tablist" aria-label="产品阶段"><button class="stage-tab" type="button" data-stage="0" role="tab"><span>01</span><b>工具快换</b><small>手 / 夹爪 / 传感器</small></button><button class="stage-tab" type="button" data-stage="1" role="tab"><span>02</span><b>整臂迁移</b><small>桌面站 ↔ 移动底盘</small></button><button class="stage-tab" type="button" data-stage="2" role="tab"><span>03</span><b>无人机操作</b><small>轻量飞臂 / 高处抓取</small></button><button class="stage-tab" type="button" data-stage="3" role="tab"><span>04</span><b>模块化人形</b><small>全身识别 / 动态平衡</small></button></div>
+      <div class="visualizer-grid">
+        <article class="scene-panel">
+          <div class="scene-head"><div><p id="stageKicker" class="eyebrow"></p><h3 id="stageTitle"></h3><p id="stageGoal"></p></div><div class="scene-actions"><button id="playButton" class="button primary small" type="button">▶ 播放</button><button id="resetButton" class="icon-button" type="button" aria-label="重置动画">↺</button></div></div>
+          <div class="scene-canvas"><svg id="sceneSvg" viewBox="0 0 940 540" role="img" aria-labelledby="sceneSvgTitle"><title id="sceneSvgTitle">模块化机器人阶段动画</title><defs><pattern id="sceneGrid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" class="grid-line"/></pattern><filter id="sceneGlow"><feGaussianBlur stdDeviation="6" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="940" height="540" fill="url(#sceneGrid)"/><g id="sceneContent"></g><g id="hotspotRing" class="hotspot-ring" opacity="0" pointer-events="none"><circle id="ringOuter" r="58"/><circle id="ringInner" r="34"/><path id="ringCross" d="M-12 0H12M0-12V12"/></g></svg><div class="scene-status"><span id="sceneStatusDot"></span><span id="sceneStatus">准备演示</span></div><div class="timeline-bar"><button id="miniPlay" class="timeline-play" type="button" aria-label="播放或暂停">▶</button><label class="sr-only" for="timeline">动画时间线</label><input id="timeline" type="range" min="0" max="100" value="0"/><output id="timelineValue">0%</output></div></div>
+          <div class="acceptance-box"><span>阶段验收</span><p id="acceptanceText"></p></div>
+        </article>
+        <aside class="challenge-panel"><div class="challenge-head"><div><p class="eyebrow">ENGINEERING HOTSPOTS</p><h3>实现难点</h3></div><span id="issueCount" class="count-pill"></span></div><div id="issueList" class="issue-list"></div><div class="issue-detail" aria-live="polite"><div class="issue-detail-top"><span id="issueCategory" class="category-pill"></span><span id="issueTime"></span></div><h4 id="issueTitle"></h4><p id="issueWhy"></p><div class="solution-line"><span>建议实现</span><p id="issueSolution"></p></div></div></aside>
+      </div>
+    </section>
+
+    <section id="architecture" class="section-shell architecture-section"><div class="section-heading"><div><p class="eyebrow">SYSTEM ARCHITECTURE</p><h2>三个层级，避免“每个零件各自为政”</h2></div><p>所有部件都有身份、算力与安全状态，但决策能力按实时性分层。</p></div><div class="architecture-flow"><article class="architecture-card"><span class="arch-index">L1</span><h3>零件层</h3><p>关节控制、触觉、温度、锁止检测、毫秒级急停。</p><ul><li>1–5 ms 控制周期</li><li>本地故障隔离</li><li>模块身份证</li></ul></article><div class="flow-arrow">→</div><article class="architecture-card emphasized"><span class="arch-index">L2</span><h3>载体层</h3><p>机器人全身协调、无人机飞控、避碰、动力学模型。</p><ul><li>身体/飞行稳定</li><li>质量与惯量更新</li><li>任务执行</li></ul></article><div class="flow-arrow">→</div><article class="architecture-card"><span class="arch-index">L3</span><h3>系统层</h3><p>语言理解、长期规划、模块调度与多智能体协作。</p><ul><li>任务分配</li><li>技能库</li><li>数字孪生</li></ul></article></div><div class="interface-strip"><span>统一接口协议</span><div><b>机械</b><small>磁力捕获 + 定位 + 双锁止</small></div><div><b>电源</b><small>预充电 + 过流 + 断电保持</small></div><div><b>数据</b><small>身份 + 实时总线 + 高速链路</small></div><div><b>安全</b><small>独立安全线 + 状态冗余</small></div></div></section>
+
+    <section id="roadmap" class="section-shell roadmap-section"><div class="section-heading"><div><p class="eyebrow">DELIVERY ROADMAP</p><h2>从概念演示到工程验证</h2></div><p>先验证最有商业价值、风险最可控的模块迁移，再进入无人机与全身人形。</p></div><div class="roadmap-grid"><article><span class="roadmap-num">01</span><h3>视觉定义</h3><p>确定机器人外观语言、关节形式、接口剖面、无人机比例和镜头脚本。</p><small>交付：风格板 + 分镜 + 关键帧</small></article><article><span class="roadmap-num">02</span><h3>交互原型</h3><p>将每个难点绑定时间码、画面坐标、说明和建议实现。</p><small>交付：网页交互 + 演示模式</small></article><article><span class="roadmap-num">03</span><h3>3D 动画</h3><p>用 Blender / Three.js 替换示意 SVG，加入材质、机械锁与真实关节运动。</p><small>交付：60–90 秒概念片</small></article><article><span class="roadmap-num">04</span><h3>工程数字孪生</h3><p>接入真实 CAD、URDF、载荷与控制数据，使视觉演示逐步成为验证工具。</p><small>交付：参数化仿真界面</small></article></div></section>
+  </main>
+  <footer class="site-footer section-shell"><p>Modular Intelligence Robot · Interactive Product Concept</p><p>本版本用于产品叙事与工程路线讨论，不代表已完成的硬件性能。</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
